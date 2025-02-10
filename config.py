@@ -31,12 +31,14 @@ def get_credentials():
                 # redirect_uri='http://127.0.0.1:8501/oauth2callback'
             )
             
-            # Use local server with specific port
-            creds = flow.run_local_server(
-                authorization_prompt_message='Please authorize the application',
-                success_message='Authentication successful! You can close this window and return to the app.',
-                open_browser=True
-            )
+            auth_url, _ = flow.authorization_url(prompt='consent')
+            st.write("Please go to this URL and authorize the application:")
+            st.write(auth_url)
+            
+            code = st.text_input("Enter the authorization code:")
+            if code:
+                flow.fetch_token(code=code)
+                creds = flow.credentials
             
             # Save credentials for future use
             with open('token.pickle', 'wb') as token:
