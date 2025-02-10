@@ -32,12 +32,9 @@ def get_credentials():
             )
             
             # Use local server with specific port
-            creds = flow.run_local_server(
-                host='0.0.0.0',
-                port=8501,
+            creds = flow.run_console(
                 authorization_prompt_message='Please authorize the application',
-                success_message='Authentication successful! You can close this window and return to the app.',
-                open_browser=True
+                success_message='Authentication successful! You can close this window and return to the app.'
             )
             
             # Save credentials for future use
