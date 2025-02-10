@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
+# import plotly.express as px
+# import plotly.graph_objects as go
 import numpy as np
-import google.generativeai as genai
+# import google.generativeai as genai
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 from config import get_credentials
 from fitness_data import FitnessData
-from google.auth.exceptions import RefreshError
+# from google.auth.exceptions import RefreshError
 import os
 import time
 

@@ -1,6 +1,24 @@
+# Streamlit & General Packages
 streamlit
+pandas
+numpy
+scikit-learn
+plotly
+
+# Machine Learning
+scikit-learn
+
+# Google API & Authentication
+google-generativeai
+google-auth
 google-auth-oauthlib
 google-auth-httplib2
-google-api-python-client
-pandas
-python-dotenv
+# google-auth-exception
+
+# Dependencies for Authentication
+requests
+oauthlib
+httplib2
+
+# Additional Dependencies
+configparser  # If 'config' module is using a config file
