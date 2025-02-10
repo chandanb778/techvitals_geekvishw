@@ -23,7 +23,7 @@ REDIRECT_URI = "https://techvital.streamlit.app/"
 if "credentials" not in st.session_state:
     st.session_state.credentials = None
 
-def get_google_auth_link():
+def get_credentials():
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE,
         scopes=SCOPES,
